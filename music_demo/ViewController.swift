@@ -58,6 +58,23 @@ class ViewController: UIViewController {
         audioPlayer?.pause()
     }
     
+    func checkIsPlaying() -> Bool
+    {
+       var playing : Bool = false
+        
+        if( audioPlayer?.rate == 0)
+        {
+            playing = false
+        }
+        else
+        {
+            playing = true
+        }
+        
+        return playing
+        
+    }
+    
     @IBAction func next_btn(_ sender: UIButton) {
         
         if(currentSongIndex+1 == songs.count){
